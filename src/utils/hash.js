@@ -6,12 +6,12 @@ async function hashPassword(password) {
   return hashedPassword;
 }
 
-async function comaprePassword(password, hashedPassword) {
+async function comparePassword(password, hashedPassword) {
   const isPassword = await bcrypt.compare(password, hashedPassword);
   return isPassword;
 }
 
 module.exports = {
   hashPassword,
-  comaprePassword,
+  comparePassword,
 };
